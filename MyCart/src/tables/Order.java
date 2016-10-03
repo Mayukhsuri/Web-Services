@@ -10,11 +10,13 @@ payment___Order ____order detail____ product
                      status
 */
 	private int OrderID;
-	private String orderstatus;
-	private String orderdate;
+	public String orderstatus;
+	public String orderdate;
 	private String product;
-	private String orderquantity;
+	private int orderquantity;
 	private int price;
+	
+	
 	public int getOrderID() {
 		return OrderID;
 	}
@@ -39,10 +41,10 @@ payment___Order ____order detail____ product
 	public void setProduct(String product) {
 		this.product = product;
 	}
-	public String getOrderquantity() {
+	public int getOrderquantity() {
 		return orderquantity;
 	}
-	public void setOrderquantity(String orderquantity) {
+	public void setOrderquantity(int orderquantity) {
 		this.orderquantity = orderquantity;
 	}
 	public int getPrice() {
