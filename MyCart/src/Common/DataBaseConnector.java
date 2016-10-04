@@ -60,7 +60,7 @@ public class DataBaseConnector {
 
 	   // handle any errors
 
-	   //System.out.println("SQLException: " + ex.getMessage());
+	   System.out.println("SQLException: " + ex.getMessage());
 
 	   //System.out.println("SQLState: " + ((SQLException) ex).getSQLState());
 
@@ -75,7 +75,7 @@ public class DataBaseConnector {
 	{
 		Order acceptobj = new Order();
 		try{
-			Class.forName("").newInstance();
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
 			Connection connection = DriverManager.getConnection(MYSQL_password, MYSQL_username,address);
 			statement = connection.createStatement();
 			ResultSet resultset2 = null;
@@ -96,7 +96,7 @@ public class DataBaseConnector {
 			catch (SQLException | InstantiationException | IllegalAccessException | ClassNotFoundException ex) {
 				
 			    // handle any errors
-			    //System.out.println("SQLException: " + ex.getMessage());
+			    System.out.println("SQLException: " + ex.getMessage());
 			    //System.out.println("SQLState: " + ((SQLException) ex).getSQLState());
 			   // System.out.println("VendorError: " + ((SQLException) ex).getErrorCode());
 			}
@@ -107,7 +107,7 @@ public class DataBaseConnector {
 	
 		Product product = new Product(1001); 
 	try {
-		Class.forName("").newInstance();
+		Class.forName("com.mysql.jdbc.Driver").newInstance();
 		
 	
 		Connection connection = DriverManager.getConnection(MYSQL_password, MYSQL_username,address);
