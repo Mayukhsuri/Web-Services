@@ -21,6 +21,30 @@ public class WebFunctions{
 
 		
 	}
+	
+	public Customer addCustomer()
+	{
+		DataBaseConnector connect3 = new DataBaseConnector();
+		
+Customer cu = new Customer();
+connect3.addcustomer(cu);
+System.out.println("Input name of the customer");
+Scanner scan = new Scanner(System.in);
+Integer customerID = scan.nextInt();
+cu.setCustomerID(customerID);
+System.out.println("Input address of cutomer");
+//Scanner scan = new Scanner(System.in);
+String caddress = scan.nextLine();
+cu.setCustomer_adderss(caddress);
+
+System.out.println("Input phone of cutomer");
+//Scanner scan = new Scanner(System.in);
+Integer cphone = scan.nextInt();
+cu.setPhone_cust(cphone);
+
+return cu;
+
+}
 	public Order orderaccept(int orderquantity)
 	{
 		DataBaseConnector connect1 = new DataBaseConnector();
