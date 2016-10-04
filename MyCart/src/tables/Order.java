@@ -10,7 +10,7 @@ payment___Order ____order detail____ product
                      status
 */
 	private int OrderID;
-	private String orderstatus;
+	private boolean orderstatus;
 	private String orderdate;
 	private String product;
 	private String orderquantity;
