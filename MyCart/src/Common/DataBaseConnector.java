@@ -1,7 +1,6 @@
 package Common;
 
 import Common.WebFunctions;
-//import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -26,6 +25,52 @@ public class DataBaseConnector {
 	private String MYSQL_password = "Mayukh123";
 	
 	private Statement statement = null;
+	
+	public Void addcustomer(Customer customer)
+
+	{
+
+	Customer custom = new Customer();
+
+	try{
+
+	Class.forName("com.mysql.jdbc.Driver").newInstance();
+
+	Connection connection = DriverManager.getConnection(MYSQL_password, MYSQL_username,address);
+
+	statement = connection.createStatement();
+
+	ResultSet resultset3 = null;
+
+	String sql3 = "INSERT INTO Customer " +
+
+	                   "VALUES (1002, 'Shefali', 746767647) ;";
+
+	resultset3 = statement.executeQuery(sql3);
+
+
+
+	System.out.println("Inserted records into the table...");
+
+	}
+
+	catch (SQLException | InstantiationException | IllegalAccessException | ClassNotFoundException ex) {
+
+
+
+	   // handle any errors
+
+	   //System.out.println("SQLException: " + ex.getMessage());
+
+	   //System.out.println("SQLState: " + ((SQLException) ex).getSQLState());
+
+	  // System.out.println("VendorError: " + ((SQLException) ex).getErrorCode());
+
+	}
+	return null;
+
+
+	}
 	public Order orderaccept(int orderquantity)
 	{
 		Order acceptobj = new Order();
