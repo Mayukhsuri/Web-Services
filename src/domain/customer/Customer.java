@@ -9,7 +9,25 @@ public class Customer {
 	private Address customerAddress;
 	private int customerPhone;
 	private Order order;
+	private String FirstName;
+	private String LastName;
 	
+	public String getFirstName() {
+		return FirstName;
+	}
+
+	public void setFirstName(String firstName) {
+		FirstName = firstName;
+	}
+
+	public String getLastName() {
+		return LastName;
+	}
+
+	public void setLastName(String lastName) {
+		LastName = lastName;
+	}
+
 	public int getCustomerID() {
 		return customerID;
 	}
@@ -42,7 +60,7 @@ public class Customer {
 		this.order = order;
 	}
 	public Customer() {
-		super();
+		
 		this.customerID = customerID;
 		this.customerAddress = customerAddress;
 		this.customerPhone = customerPhone;

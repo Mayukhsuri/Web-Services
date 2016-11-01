@@ -1,5 +1,6 @@
 package domain.customer;
 import java.util.Scanner;
+import java.util.Set;
 
 
 import dbconn.CustomerDb;
@@ -14,8 +15,7 @@ public class Customermanagerfacade extends CustomerDb{
 		
 		//int customerID=0;
 		Address customerAddress= null;
-		//int customerPhone=0;
-		//Order order = new Order();
+		
 		CustomerDb conn = new CustomerDb();	
 		
 		Customer c = new Customer();
@@ -47,5 +47,13 @@ public class Customermanagerfacade extends CustomerDb{
 		
 	conn.customerinsert(c)	;
 	
+	}
+	public Set<Customer> getAllCustomers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public Customer addCustomer(String firstName, String lastName) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
