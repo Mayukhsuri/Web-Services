@@ -1,19 +1,16 @@
-package services.order;
+package services.partner;
 
 import java.util.Set;
 
 import services.representation.customer.CustomerRepresentation;
 import services.representation.customer.CustomerRequest;
-import services.representation.order.OrderRepresentation;
-import services.representation.partner.PartnerRepresentation;
 import services.workflow.customer.CustomerActivity;
-import services.workflow.order.OrderActivity;
 
-public class OrderResource {
-	public Set<OrderRepresentation> getCustomer() {
+public class PartnerResource {
+	public Set<CustomerRepresentation> getCustomer() {
 		System.out.println("GET METHOD Request for all customers .............");
-		OrderActivity custActivity = new OrderActivity();
-		return custActivity.getCustomer();
+		CustomerActivity custActivity = new CustomerActivity();
+		return custActivity.getCustomer();	
 	}
 	
 	public CustomerRepresentation getCustomer(String id) {
