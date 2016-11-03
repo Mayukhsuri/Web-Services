@@ -3,6 +3,8 @@ package services.representation.customer;
 public class CustomerRequest {
 	private String firstName;
 	private String lastName;
+	private int CustomerID;
+	
 	
 	public String getFirstName() {
 		return firstName;
@@ -15,6 +17,12 @@ public class CustomerRequest {
 	}
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+	public int getCustomerID() {
+		return CustomerID;
+	}
+	public void setCustomerID(int customerID) {
+		CustomerID = customerID;
 	}
 	
 }

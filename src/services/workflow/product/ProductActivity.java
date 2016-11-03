@@ -41,7 +41,7 @@ private static ProductManagerfacade em = new ProductManagerfacade();
 	public ProductRepresentation getProduct(String id) {
 		
 		//Employee emp = dao.getEmployee(id);
-		Product ord = em.getProduct(id); 
+		Product ord = em.getProduct(); 
 		
 		ProductRepresentation ordRep = new ProductRepresentation();
 		ordRep.setProductDescription(ord.getProductDescription());
