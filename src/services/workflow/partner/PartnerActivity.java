@@ -19,7 +19,7 @@ private static PartnerManagerfacade em = new PartnerManagerfacade();
 		Set<Partner> partner = new HashSet<Partner>();
 		Set<PartnerRepresentation> partnerRepresentations = new HashSet<PartnerRepresentation>();
 		//employees = dao.getAllEmployees();
-		partner = em.getAllPartners();
+		partner = em.getAllPartners(id);
 		
 		Iterator<Partner> it = partner.iterator();
 		while(it.hasNext()) {

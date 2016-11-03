@@ -8,7 +8,6 @@ import java.sql.Statement;
 
 import domain.product.Product;
 
-import table.*;
 
 public class dbConnection {
 
@@ -17,7 +16,7 @@ public class dbConnection {
 	private static String dbUsername = "root";
 	private static String dbPassword = "Mayukh123";
 
-	private Statement statement = null;
+	private static Statement statement = null;
 
 	public Product searchProduct(int productID)
 	{
@@ -62,6 +61,28 @@ public class dbConnection {
 			}
 		}
 		return product;
+	}
+
+	public static String addProduct(Product product) {
+		// TODO Auto-generated method stub
+		
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			Connection connection = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
+			statement = connection.createStatement();
+			ResultSet result = null;
+			System.out.println("Records inserted");
+			String status = "Product Added" ;
+			return status;
+
+		}catch (Throwable ex) {
+			// Make sure you log the exception, as it might be swallowed
+			System.err.println("Initial SessionFactory creation failed." + ex);
+			throw new ExceptionInInitializerError(ex);
+		}
+	
+			
 	}	
 
 	

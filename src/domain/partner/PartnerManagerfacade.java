@@ -42,11 +42,11 @@ public class PartnerManagerfacade  extends PartnerDb{
 	conn.Partnerinsert(c);
 	
 	}
-	public Set<Partner> getAllPartners() {
+	public Set<Partner> getAllPartners(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	public Partner addCustomer(String firstName, String lastName) {
+	public Partner addPartner(String Name, String idd) {
 		// TODO Auto-generated method stub
 		return null;
 	}
