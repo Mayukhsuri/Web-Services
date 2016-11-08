@@ -39,7 +39,7 @@ private static Customermanagerfacade em = new Customermanagerfacade();
 	public CustomerRepresentation getCustomer(int id) {
 		
 		//Employee emp = dao.getEmployee(id);
-		Customer emp = em.getAllCustomers(id); 
+		Customer emp = em.getAllCustomer(id); 
 		
 		CustomerRepresentation empRep = new CustomerRepresentation();
 		empRep.setFirstName(emp.getFirstName());

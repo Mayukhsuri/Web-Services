@@ -26,7 +26,7 @@ public class Productclient {
 
     public static void main(String args[]) throws Exception {
 
-    	 List<Object> providers = new ArrayList<Object>();
+    	 ArrayList<Object> providers = new ArrayList<Object>();
          JacksonJsonProvider provider = new JacksonJsonProvider();
          provider.addUntouchable(Response.class);
          providers.add(provider);

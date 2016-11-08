@@ -8,6 +8,7 @@ import javax.xml.ws.Response;
 import services.representation.customer.CustomerRequest;
 import services.representation.order.OrderRequest;
 
+import com.sun.xml.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 
@@ -24,7 +25,7 @@ public class Orderclient {
 
     public static void main(String args[]) throws Exception {
 
-    	 List<Object> providers = new ArrayList<Object>();
+    	 ArrayList<Object> providers = new ArrayList<Object>();
          JacksonJsonProvider provider = new JacksonJsonProvider();
          provider.addUntouchable(Response.class);
          providers.add(provider);

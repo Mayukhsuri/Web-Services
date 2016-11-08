@@ -23,7 +23,7 @@ public class Customerclient {
 
     public static void main(String args[]) throws Exception {
 
-    	 List<Object> providers = new ArrayList<Object>();
+    	 ArrayList<Object> providers = new ArrayList<Object>();
          JacksonJsonProvider provider = new JacksonJsonProvider();
          provider.addUntouchable(Response.class);
          providers.add(provider);
@@ -92,7 +92,7 @@ public class Customerclient {
         System.out.println("Client DELETE METHOD Request Headers:  " + deleteRequestHeaders);
         
         deleteClient.delete();
-        System.out.println("DELETE MEDTHOD Response ......... OK");
+        System.out.println("DELETE METHOD Response ......... OK");
          
         System.exit(0);
     }

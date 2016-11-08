@@ -56,4 +56,8 @@ public class Customermanagerfacade extends CustomerDb{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	public Customer getAllCustomer(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
