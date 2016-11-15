@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Map;
+import java.util.Set;
 
 import javax.management.Query;
 
@@ -84,6 +85,16 @@ public class CustomerDb {
 		return null;
 		
 	}
+
+	public Set<Customer> getAllCustomers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Customer getCustomer() {
+		// TODO Auto-generated method stub
+		return null;
+	  }
 	
 	
 }

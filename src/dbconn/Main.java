@@ -2,7 +2,6 @@ package dbconn;
 
 
 import domain.product.Product;
-import table.*;
 import functions.*;
 
 

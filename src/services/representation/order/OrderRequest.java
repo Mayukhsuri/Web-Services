@@ -2,7 +2,16 @@ package services.representation.order;
 
 import domain.order.Orderstatus;
 import domain.product.Product;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
+
+
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "")
 public class OrderRequest  {
 	private Orderstatus orderStatus;
 	public Orderstatus getOrderStatus() {
@@ -11,10 +20,10 @@ public class OrderRequest  {
 	public void setOrderStatus(Orderstatus orderStatus) {
 		this.orderStatus = orderStatus;
 	}
-	public String getOrderDate() {
+	public int getOrderDate() {
 		return orderDate;
 	}
-	public void setOrderDate(String orderDate) {
+	public void setOrderDate(int orderDate) {
 		this.orderDate = orderDate;
 	}
 	public String getOrderQuantity() {
@@ -35,7 +44,7 @@ public class OrderRequest  {
 	public void setProduct(Product product) {
 		this.product = product;
 	}
-	private String orderDate;
+	private int orderDate;
 	private String orderQuantity;
 	private double totalPrice;
 	private Product product;

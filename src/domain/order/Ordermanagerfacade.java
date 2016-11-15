@@ -3,17 +3,20 @@ import dbconn.*;
 import domain.order.*;
 import domain.product.Product;
 
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 
 public class Ordermanagerfacade extends OrderDb{
 
+	OrderDb oconn = new OrderDb();
 	public void ordermanage(Map<Product,Integer> product, String orderdesp, int orderquant)
 	{
 		Order o = new Order();
 		String status=null;
 		Orderstatus os = new Orderstatus(status);
-		OrderDb oconn = new OrderDb();
+		
 
 		orderdesp ="book";
 		orderquant = 2;		
@@ -25,4 +28,22 @@ public class Ordermanagerfacade extends OrderDb{
 		os.setOrderStatus("dispatch");
 		oconn.orderaccept(o, product);
 	}
+
+	public Order addOrder(int orderDate, Orderstatus orderStatus) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Set<Order> getAllorders() {
+		Set<Order> orders = new HashSet<Order>();
+		//orders = oconn.or
+				return null;
+	}
+
+	public Order getOrder(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 }

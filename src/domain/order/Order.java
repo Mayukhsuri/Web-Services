@@ -3,7 +3,6 @@ package domain.order;
 import domain.customer.*;
 import domain.order.*;
 import domain.product.*;
-import table.*;
 
 public class Order {
 
@@ -11,12 +10,12 @@ public class Order {
 	
 	private Customer customer;
 	private Orderstatus orderStatus;
-	private String orderDate;
+	private int orderDate;
 	private String orderQuantity;
 	private double totalPrice;
 	private Product product;
 	
-	public Order(int orderID, Customer customer,  Orderstatus orderStatus, String orderDate, String orderQuantity,
+	public Order(int orderID, Customer customer,  Orderstatus orderStatus, int orderDate, String orderQuantity,
 			double totalPrice, Product product) {
 		
 		this.orderID = orderID;
@@ -57,10 +56,10 @@ public class Order {
 	public void setOrderStatus(Orderstatus orderStatus) {
 		this.orderStatus = orderStatus;
 	}
-	public String getOrderDate() {
+	public int getOrderDate() {
 		return orderDate;
 	}
-	public void setOrderDate(String orderDate) {
+	public void setOrderDate(int orderDate) {
 		this.orderDate = orderDate;
 	}
 	public String getOrderQuantity() {

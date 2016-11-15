@@ -17,7 +17,7 @@ public class ProductActivity{
 
 private static ProductManagerfacade em = new ProductManagerfacade();
 	
-	public Set<ProductManagerfacade> getProducts() {
+	public Set<ProductRepresentation> getProducts() {
 		
 		Set<Product> product = new HashSet<Product>();
 		Set<ProductRepresentation> productRepresentation = new HashSet<ProductRepresentation>();
@@ -38,10 +38,10 @@ private static ProductManagerfacade em = new ProductManagerfacade();
 		return productRepresentation;
 	}
 	
-	public ProductRepresentation getProduct(String id) {
+	public ProductRepresentation getProduct(int id) {
 		
 		//Employee emp = dao.getEmployee(id);
-		Product ord = em.getProduct(); 
+		Product ord = em.serachProduct(id);
 		
 		ProductRepresentation ordRep = new ProductRepresentation();
 		ordRep.setProductDescription(ord.getProductDescription());
@@ -62,5 +62,10 @@ private static ProductManagerfacade em = new ProductManagerfacade();
 		ordRep.setProductID(emp.getProductID());
 		
 		return ordRep;
+	}
+
+	public Set<ProductRepresentation> getProduct() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

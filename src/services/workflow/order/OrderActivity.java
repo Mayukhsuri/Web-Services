@@ -4,30 +4,31 @@ import java.util.Iterator;
 import java.util.Set;
 
 import services.order.OrderServices;
-import services.representation.*;
+import services.representation.order.*;
 
 
 import domain.order.Order;
 import domain.order.Ordermanagerfacade;
+import domain.order.Orderstatus;
 
 public class OrderActivity  {
 
 private static Ordermanagerfacade em = new Ordermanagerfacade();
 	
-	public Set<Ordermanagerfacade> getCustomers() {
+	public Set<OrderRepresentation> getorder() {
 		
 		Set<Order> order = new HashSet<Order>();
 		Set<OrderRepresentation> orderRepresentation = new HashSet<OrderRepresentation>();
 		//employees = dao.getAllEmployees();
-		order = em.getAllOrders();
+		order = em.getAllorders();
 		
 		Iterator<Order> it = order.iterator();
 		while(it.hasNext()) {
 			Order emp = (Order)it.next();
 			OrderRepresentation orderRepresentations= new OrderRepresentation();
-			orderRepresentations.setOrderID(emp.getOrderID());
-			orderRepresentations.setFirstName(emp.getFirstName());
-			orderRepresentations.setLastName(emp.getLastName());
+			orderRepresentations.setorderID(emp.getOrderID());
+			orderRepresentations.setOrderdate(emp.getOrderDate());
+	orderRepresentations.setOrderstatus(emp.getOrderStatus());
           
           //now add this representation in the list
 			orderRepresentations.add(orderRepresentations);
@@ -38,24 +39,25 @@ private static Ordermanagerfacade em = new Ordermanagerfacade();
 	public OrderRepresentation getOrder(String id) {
 		
 		//Employee emp = dao.getEmployee(id);
-		Order ord = em.getOrder(id); 
+		Order ord = new Order();
+		ord = em.getOrder(id);
 		
 		OrderRepresentation ordRep = new OrderRepresentation();
-		ordRep.setFirstName(ord.getFirstName());
-		ordRep.setLastName(ord.getLastName());
-		ordRep.setOrderID(ord.getOrderID());
+		ordRep.setOrderdate(ord.getOrderDate());
+		ordRep.setOrderstatus(ord.getOrderStatus());
+		ordRep.setorderID(ord.getOrderID());
 		
-		return empRep;
+		return ordRep;
 	}
 	
-	public OrderRepresentation createEmployee(String firstName, String lastName) {
+	public OrderRepresentation createorder(int orderDate, Orderstatus orderStatus) {
 		
 		//Employee emp = dao.addEmployee(firstName, lastName);
-		Order emp = em.addOrder(firstName, lastName);
+		Order emp = em.addOrder(orderDate, orderStatus);
 		
 		OrderRepresentation ordRep = new OrderRepresentation();
-		ordRep.setFirstName(emp.getFirstName());
-		ordRep.setLastName(emp.getLastName());
+		ordRep.setOrderdate(emp.getOrderDate());
+		ordRep.setOrderstatus(emp.getOrderStatus());
 		ordRep.setorderID(emp.getOrderID());
 		
 		return ordRep;
@@ -67,6 +69,11 @@ private static Ordermanagerfacade em = new Ordermanagerfacade();
 		//em.deleteOrder(id);
 		
 		return "OK";
+	}
+
+	public Set<OrderRepresentation> getOrders() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 

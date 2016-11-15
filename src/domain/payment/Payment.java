@@ -1,7 +1,6 @@
 package domain.payment;
 import domain.customer.*;
 import domain.product.Product;
-import table.*;
 
 
 public class Payment {

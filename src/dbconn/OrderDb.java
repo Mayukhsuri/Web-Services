@@ -10,7 +10,6 @@ import java.util.Map;
 import domain.order.Order;
 import domain.product.Product;
 
-import table.*;
 
 public class OrderDb {
 

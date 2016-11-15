@@ -6,6 +6,7 @@ import java.util.Set;
 import services.customer.Customerservices;
 import services.representation.customer.CustomerRepresentation;
 import services.representation.order.*;
+import services.representation.partner.PartnerRepresentation;
 
 
 import domain.customer.Customer;
@@ -15,7 +16,7 @@ public class CustomerActivity  {
 
 private static Customermanagerfacade em = new Customermanagerfacade();
 	
-	public Set<Customermanagerfacade> getCustomers() {
+	public Set<CustomerRepresentation> getCustomers() {
 		
 		Set<Customer> customers = new HashSet<Customer>();
 		Set<CustomerRepresentation> customerRepresentations = new HashSet<CustomerRepresentation>();
@@ -36,22 +37,11 @@ private static Customermanagerfacade em = new Customermanagerfacade();
 		return customerRepresentations;
 	}
 	
-	public CustomerRepresentation getCustomer(int id) {
+	
+public CustomerRepresentation getCustomer(String id) {
 		
 		//Employee emp = dao.getEmployee(id);
-		Customer emp = em.getAllCustomer(id); 
-		
-		CustomerRepresentation empRep = new CustomerRepresentation();
-		empRep.setFirstName(emp.getFirstName());
-		empRep.setLastName(emp.getLastName());
-		empRep.setcustomerID(emp.getCustomerID());
-		
-		return empRep;
-	}
-public CustomerRepresentation getCustomer() {
-		
-		//Employee emp = dao.getEmployee(id);
-		Customer emp = em.getcustomers(id); 
+		Customer emp = em.getCustomer(id); 
 		
 		CustomerRepresentation empRep = new CustomerRepresentation();
 		empRep.setFirstName(emp.getFirstName());
@@ -80,6 +70,8 @@ public CustomerRepresentation getCustomer() {
 		
 		return "OK";
 	}
+
+
 	
 
 }

@@ -7,7 +7,6 @@ import domain.order.Order;
 import domain.order.Orderstatus;
 import domain.payment.Payment;
 import domain.product.Product;
-import table.*;
 
 public class Functionalities {
 	public Product serachProduct(int productID)

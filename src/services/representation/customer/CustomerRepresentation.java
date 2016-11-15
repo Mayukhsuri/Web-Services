@@ -1,5 +1,13 @@
 package services.representation.customer;
 
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlAccessType;
+
+@XmlRootElement(name = "Customer")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "")
 public class CustomerRepresentation {
 	private int customerID;
 	private String lastName;

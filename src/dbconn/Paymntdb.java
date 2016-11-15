@@ -9,7 +9,6 @@ import java.sql.Statement;
 import domain.payment.Payment;
 import domain.product.Product;
 
-import table.*;
 
 public class Paymntdb {
 

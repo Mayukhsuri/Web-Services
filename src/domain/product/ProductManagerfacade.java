@@ -18,13 +18,17 @@ public class ProductManagerfacade extends dbConnection{
 		return product;
 
 	}
-	public String addProduct(String productDescription, double unitPrice, int availableQuantity)
+	public Product addProduct(String productDescription, double unitPrice, int availableQuantity)
 	{
 	
 		Product product = new Product();
 		product.setProductDescription(productDescription);
 		product.setUnitPrice(unitPrice);
 		String status = dbConnection.addProduct(product);
-		return status;
+		return product;
+	}
+	public Set<Product> getAllProduct() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

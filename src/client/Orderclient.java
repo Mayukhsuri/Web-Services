@@ -70,9 +70,9 @@ public class Orderclient {
         String postRequestHeaders = postClient.getHeaders().toString();
         System.out.println("Client POST METHOD Request Headers:  " + postRequestHeaders);
         OrderRequest orderRequest = new OrderRequest();
-        orderRequest.setOrderDate("6456467");
+        orderRequest.setOrderDate(6456467);
         orderRequest.setOrderQuantity("4");
-        orderRequest.setProduct("book");
+        //orderRequest.setProduct("book");
         orderRequest.setTotalPrice(900.0);
         
         String responsePost =  postClient.post(orderRequest, String.class);

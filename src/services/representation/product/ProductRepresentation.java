@@ -1,5 +1,14 @@
 package services.representation.product;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
+
+
+@XmlRootElement(name = "Product")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "")
 public class ProductRepresentation {
 
 private int ProductID;
@@ -34,6 +43,12 @@ public double getUnitPrice() {
 
 public void setUnitPrice(double unitPrice) {
 	this.unitPrice = unitPrice;
+}
+
+
+public void add(ProductRepresentation productRepresentations) {
+	// TODO Auto-generated method stub
+	
 }
 
 }

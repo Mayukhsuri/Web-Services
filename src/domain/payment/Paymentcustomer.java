@@ -1,5 +1,4 @@
 package domain.payment;
-import table.*;
 
 public class Paymentcustomer {
 	public void paymentcheck(Payment payy)

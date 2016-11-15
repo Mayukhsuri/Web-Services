@@ -1,9 +1,20 @@
 package services.representation.order;
 
+import domain.order.Orderstatus;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+
+@XmlRootElement(name = "Order")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "")
     public class OrderRepresentation {
 	private int orderID;
-	private String lastName;
-	private String firstName;
+	private int orderdate;
+	private Orderstatus orderstatus;
 	
 	public int getorderID() {
 		return orderID;
@@ -11,16 +22,23 @@ package services.representation.order;
 	public void setorderID(int orderID) {
 		this.orderID = orderID;
 	}
-	public String getLastName() {
-		return lastName;
+	
+	
+	
+	public int getOrderdate() {
+		return orderdate;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setOrderdate(int orderdate) {
+		this.orderdate = orderdate;
 	}
-	public String getFirstName() {
-		return firstName;
+	public Orderstatus getOrderstatus() {
+		return orderstatus;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setOrderstatus(Orderstatus orderstatus) {
+		this.orderstatus = orderstatus;
+	}
+	public void add(OrderRepresentation orderRepresentations) {
+		// TODO Auto-generated method stub
+		
 	}	
 }
